@@ -1,76 +1,16 @@
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
-// import { CalcProps, TransProps } from "@/pages/MainPage/types/types.ts";
 import "./styles/MainPage.css";
 import { Link } from "react-router-dom";
+import { calc, trans } from "@/app/helpers/calculations.ts";
+import {
+  btn,
+  main,
+  text,
+  textCont,
+} from "@/pages/MainPage/constants/animationVariants.ts";
 
 const MainPage = () => {
-  const main = {
-    in: { opacity: 0 },
-    anim: {
-      opacity: 1,
-      transition: {
-        duration: 0.2,
-        staggerChildren: 1.5,
-      },
-    },
-  };
-
-  const textCont = {
-    in: { y: 200 },
-    anim: {
-      y: 0,
-      transition: {
-        duration: 3,
-        staggerChildren: 0.2,
-        delayChildren: 0.5,
-      },
-    },
-    out: {
-      y: -500,
-      transition: {
-        duration: 2,
-      },
-    },
-  };
-
-  const text = {
-    in: { y: 100 },
-    anim: {
-      y: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
-  const btn = {
-    in: { opacity: 0 },
-    anim: {
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        delay: 4.5,
-      },
-    },
-    out: {
-      opacity: 0,
-      scale: 0.5,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
-  const calc = (x, y) => [
-    (window.innerHeight / 2 - y) / 50,
-    (x - window.innerWidth / 2) / 50,
-    1.1,
-  ];
-
-  const trans = (x, y, s) =>
-    `perspective(500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 50 },

@@ -1,69 +1,22 @@
+import "./styles/ValoPlayerPage.styles.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
-import "./styles/ValoPlayerPage.styles.css";
+import { calc, trans } from "@/app/helpers/calculations.ts";
+import {
+  artistInfo,
+  circle,
+  circleWrapper,
+} from "@/pages/ValoPlayerPage/constants/animationVariants.ts";
 import berstyxImg from "@/assets/berstyx.webp";
+import { names } from "@/pages/ValoPlayerPage/constants/textConst.ts";
 
 const ValoPlayerPage = () => {
-  const calc = (x, y) => [
-    (window.innerHeight / 2 - y) / 50,
-    (x - window.innerWidth / 2) / 50,
-    1.1,
-  ];
-
-  const trans = (x, y, s) =>
-    `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 50 },
   }));
-
-  const circleWrapper = {
-    in: {
-      scale: 0,
-      clipPath: "circle(500%)",
-    },
-    anim: {
-      scale: [null, 1.2, 1],
-      clipPath: "circle(0%)",
-      transition: {
-        delay: 0.2,
-        duration: 4,
-        times: [0, 0.8, 1],
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const circle = {
-    in: { rotate: 0, y: "-50%", x: "-50%" },
-    anim: {
-      rotate: [null, -15, 0],
-      transition: {
-        duration: 2,
-        times: [0, 0.3, 1],
-      },
-    },
-  };
-
-  const artistInfo = {
-    in: { y: "110%" },
-    anim: {
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 4.6,
-      },
-    },
-    out: {
-      y: "-110%",
-      transition: {
-        duration: 1,
-      },
-    },
-  };
 
   return (
     <motion.div className="TopArtist">
@@ -72,141 +25,48 @@ const ValoPlayerPage = () => {
         variants={circleWrapper}
         initial="in"
         animate="anim"
-        onAnimationComplete={() =>
-          document
-            .querySelector(".initial-animate-screen")
-            .classList.add("display-none")
-        }
+        onAnimationComplete={() => {
+          const element = document.querySelector(".initial-animate-screen");
+
+          if (element !== null) {
+            element.classList.add("display-none");
+          }
+        }}
       >
         <motion.div className="circle" id="one" variants={circle}>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
+          {Array(30)
+            .fill(null)
+            .map((_, index) => (
+              <h1 key={index}>ВАЛОРАНТ ПЛЕЄР</h1>
+            ))}
         </motion.div>
         <motion.div className="circle two" variants={circle}>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
+          {Array(30)
+            .fill(null)
+            .map((_, index) => (
+              <h1 key={index}>ВАЛОРАНТ ПЛЕЄР</h1>
+            ))}
         </motion.div>
         <motion.div className="circle three" variants={circle}>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
+          {Array(30)
+            .fill(null)
+            .map((_, index) => (
+              <h1 key={index}>ВАЛОРАНТ ПЛЕЄР</h1>
+            ))}
         </motion.div>
         <motion.div className="circle four" variants={circle}>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
+          {Array(30)
+            .fill(null)
+            .map((_, index) => (
+              <h1 key={index}>ВАЛОРАНТ ПЛЕЄР</h1>
+            ))}
         </motion.div>
         <motion.div className="circle five" variants={circle}>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
-          <h1>ВАЛОРАНТ ПЛЕЄР</h1>
+          {Array(30)
+            .fill(null)
+            .map((_, index) => (
+              <h1 key={index}>ВАЛОРАНТ ПЛЕЄР</h1>
+            ))}
         </motion.div>
       </motion.div>
       <motion.div
@@ -221,7 +81,7 @@ const ValoPlayerPage = () => {
       >
         <animated.div
           className="top-artist-card"
-          style={{ transform: props.xys.interpolate(trans) }}
+          style={{ transform: props.xys.to(trans) }}
         >
           <div className="artist-img">
             <motion.img
@@ -265,7 +125,7 @@ const ValoPlayerPage = () => {
                 animate="anim"
                 exit="out"
               >
-                Йопта, 46 разів слово "вал", на пріколі...
+                Йопта, 46 разів слово &quot;вал&quot;, на пріколі...
               </motion.p>
             </div>
           </div>
@@ -281,22 +141,7 @@ const ValoPlayerPage = () => {
           exit={{ opacity: 0, transition: { duration: 1.5 } }}
           style={{ fontSize: `${110 / (600 / 40)}vw` }}
         >
-          Дана, Dana, Danae, Danila, Даніела, Daiana, Danae, Danièle, Danila,
-          Danuta, Danuše, Данијела, Danijela, Δανάη, Danaḯ, דנה, دانة, दाना,
-          达娜, ダナ, 다나, Дана, Dana, Danae, Danila, Даніела, Daiana, Danae,
-          Danièle, Danila, Danuta, Danuše, Данијела, Danijela, Δανάη, Danaḯ,
-          דנה, دانة, दाना, 达娜, ダナ, 다나, Дана, Dana, Danae, Danila, Даніела,
-          Daiana, Danae, Danièle, Danila, Danuta, Danuše, Данијела, Danijela,
-          Δανάη, Danaḯ, דנה, دانة, दाना, 达娜, ダナ, 다나, Дана, Dana, Danae,
-          Danila, Даніела, Daiana, Danae, Danièle, Danila, Danuta, Danuše,
-          Данијела, Danijela, Δανάη, Danaḯ, דנה, دانة, दाना, 达娜, ダナ, 다나,
-          Дана, Dana, Danae, Danila, Даніела, Daiana, Danae, Danièle, Danila,
-          Danuta, Danuše, Данијела, Danijela, Δανάη, Danaḯ, דנה, دانة, दाना,
-          达娜, ダナ, 다나, Дана, Dana, Danae, Danila, Даніела, Daiana, Danae,
-          Danièle, Danila, Danuta, Danuše, Данијела, Danijela, Δανάη, Danaḯ,
-          דנה, دانة, दाना, 达娜, ダナ, 다나, Дана, Dana, Danae, Danila, Даніела,
-          Daiana, Danae, Danièle, Danila, Danuta, Danuše, Данијела, Danijela,
-          Δανάη, Danaḯ, דנה, دانة, दाना, 达娜, ダナ, 다나,
+          {names}
         </motion.p>
       </motion.div>
       <motion.div
