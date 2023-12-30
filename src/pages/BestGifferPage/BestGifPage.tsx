@@ -157,7 +157,7 @@ const BestGifPage = () => {
         </div>
         <div className="page-no">
           <p>
-            <span>3</span> / 5
+            <span>3</span> / 11
           </p>
         </div>
         <div className="next">

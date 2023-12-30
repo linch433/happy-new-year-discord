@@ -1,18 +1,17 @@
-import "./styles/TopMsgPage.style.css";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { animated, useSpring } from "@react-spring/web";
 import { motion } from "framer-motion";
-import { useSpring, animated } from "@react-spring/web";
-import { calc, trans } from "@/app/helpers/calculations.ts";
 import {
   artistInfo,
   circle,
   circleWrapper,
 } from "@/pages/TopByMessagesPage/constants/animationVariants.ts";
-import sanyaImg from "@/assets/juliet.webp";
-import { names } from "@/pages/TopByMessagesPage/constants/textConst.ts";
+import { calc, trans } from "@/app/helpers/calculations.ts";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { names } from "@/pages/PingBoyPage/constants/textConst.ts";
+import loader from "@/assets/loader.gif";
 
-const TopMsgPage = () => {
+const PingBoyPage = () => {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 50 },
@@ -37,35 +36,35 @@ const TopMsgPage = () => {
           {Array(30)
             .fill(null)
             .map((_, index) => (
-              <h1 key={index}>НАЙБІЛЬШЕ ПИЗДЮКАВ</h1>
+              <h1 key={index}>LOADING...</h1>
             ))}
         </motion.div>
         <motion.div className="circle two" variants={circle}>
           {Array(30)
             .fill(null)
             .map((_, index) => (
-              <h1 key={index}>НАЙБІЛЬШЕ ПИЗДЮКАВ</h1>
+              <h1 key={index}>LOADING...</h1>
             ))}
         </motion.div>
         <motion.div className="circle three" variants={circle}>
           {Array(30)
             .fill(null)
             .map((_, index) => (
-              <h1 key={index}>НАЙБІЛЬШЕ ПИЗДЮКАВ</h1>
+              <h1 key={index}>LOADING...</h1>
             ))}
         </motion.div>
         <motion.div className="circle four" variants={circle}>
           {Array(30)
             .fill(null)
             .map((_, index) => (
-              <h1 key={index}>НАЙБІЛЬШЕ ПИЗДЮКАВ</h1>
+              <h1 key={index}>LOADING...</h1>
             ))}
         </motion.div>
         <motion.div className="circle five" variants={circle}>
           {Array(30)
             .fill(null)
             .map((_, index) => (
-              <h1 key={index}>НАЙБІЛЬШЕ ПИЗДЮКАВ</h1>
+              <h1 key={index}>LOADING...</h1>
             ))}
         </motion.div>
       </motion.div>
@@ -89,7 +88,7 @@ const TopMsgPage = () => {
               initial="in"
               animate="anim"
               exit="out"
-              src={sanyaImg}
+              src={loader}
               alt="avatar image"
             />
           </div>
@@ -102,7 +101,7 @@ const TopMsgPage = () => {
                 exit="out"
                 className="text-4xl mb-2"
               >
-                Найбільше наговорив
+                Щось нічого не грузить
                 <br />
                 за цей 2023 рік:
               </motion.h2>
@@ -115,7 +114,7 @@ const TopMsgPage = () => {
                 animate="anim"
                 exit="out"
               >
-                @Juliett
+                @Beatraid
               </motion.h1>
             </div>
             <div>
@@ -125,7 +124,9 @@ const TopMsgPage = () => {
                 animate="anim"
                 exit="out"
               >
-                Майже 5000 (4973) слів, ну ти і говорилка!
+                Loading...
+                <br />
+                const avg_ping = 318.
               </motion.p>
             </div>
           </div>
@@ -151,17 +152,17 @@ const TopMsgPage = () => {
         transition={{ duration: 1 }}
       >
         <div className="prev">
-          <div>
+          <Link to="/important-clown">
             <FaChevronUp style={{ color: "white" }} />
-          </div>
+          </Link>
         </div>
         <div className="page-no">
           <p>
-            <span>1</span> / 11
+            <span>5</span> / 11
           </p>
         </div>
         <div className="next">
-          <Link to="/valo-players">
+          <Link to="/immo-player">
             <FaChevronDown style={{ color: "white" }} />
           </Link>
         </div>
@@ -170,4 +171,4 @@ const TopMsgPage = () => {
   );
 };
 
-export default TopMsgPage;
+export default PingBoyPage;

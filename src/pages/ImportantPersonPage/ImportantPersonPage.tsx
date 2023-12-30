@@ -156,11 +156,11 @@ const ImportantPersonPage = () => {
         </div>
         <div className="page-no">
           <p>
-            <span>4</span> / 5
+            <span>4</span> / 11
           </p>
         </div>
         <div className="next">
-          <Link to="/important-clown">
+          <Link to="/ping">
             <FaChevronDown style={{ color: "white" }} />
           </Link>
         </div>

@@ -1,0 +1,4 @@
+const names =
+  "Максим, Макс, Maxim, Maximus, Máximo, Maximilian, Maxime, Massimo, Massimiliano, Maksymilian, Максимилијан, Μάξιμος, Maximos, מקסים, ماكس, मैक्स, 马克西姆, マキシム, 막심, Максим, Макс, Maxim, Maximus, Máximo, Maximilian, Maxime, Massimo, Massimiliano, Maksymilian, Максимилијан, Μάξιμος, Maximos, מקסים, ماكس, मैक्स, 马克西姆, マキシム, 막심, Максим, Макс, Maxim, Maximus, Máximo, Maximilian, Maxime, Massimo, Massimiliano, Maksymilian, Максимилијан, Μάξιμος, Maximos, מקסים, ماكس, मैक्स, 马克西姆, マキシム, 막심, Максим, Макс, Maxim, Maximus, Máximo, Maximilian, Maxime, Massimo, Massimiliano, Maksymilian, Максимилијан, Μάξιμος, Maximos, מקסים, ماكس, मैक्स, 马克西姆, マキシム, 막심, Максим, Макс, Maxim, Maximus, Máximo, Maximilian, Maxime, Massimo, Massimiliano, Maksymilian, Максимилијан, Μάξιμος, Maximos, מקסים, ماكس, मैक्स, 马克西姆, マキシム, 막심, ";
+
+export { names };

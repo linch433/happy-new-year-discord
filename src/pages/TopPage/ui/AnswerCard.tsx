@@ -17,14 +17,14 @@ const AnswerCard = () => {
   };
 
   return (
-    <Card className="min-w-72 max-w-4xl">
-      <CardHeader className="flex justify-center items-center">
-        <CardTitle className="text-xl">
+    <Card className="min-w-72 max-w-4xl bg-[#3b00e2]">
+      <CardHeader className="flex">
+        <CardTitle className="text-xl text-white text-center">
           Хто на Вашу думку найбільше написав повідомлень?
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-wrap flex-row w-fit items-center gap-4">
+        <div className="flex flex-col w-full gap-2">
           {users.map((user, index) => (
             <UserAvatar
               key={`${index} + ${user.userName}`}

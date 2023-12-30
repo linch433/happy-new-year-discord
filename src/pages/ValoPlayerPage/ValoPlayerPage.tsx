@@ -157,7 +157,7 @@ const ValoPlayerPage = () => {
         </div>
         <div className="page-no">
           <p>
-            <span>2</span> / 5
+            <span>2</span> / 11
           </p>
         </div>
         <div className="next">

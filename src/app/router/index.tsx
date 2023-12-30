@@ -9,6 +9,13 @@ import BestGifPage from "@/pages/BestGifferPage/BestGifPage.tsx";
 import ImportantPersonPage from "@/pages/ImportantPersonPage/ImportantPersonPage.tsx";
 import BestPersonTestPage from "@/pages/BestPersonTestPage/BestPersonTestPage.tsx";
 import IntroductionPage from "@/pages/IntroductionPage/IntroductionPage.tsx";
+import PingBoyPage from "@/pages/PingBoyPage/PingBoyPage.tsx";
+import ImmortalPlayerPage from "@/pages/ImmortalPlayerPage/ImmortalPlayerPage.tsx";
+import VandalBroPage from "@/pages/VandalBroPage/VandalBroPage.tsx";
+import ChameleonPage from "@/pages/ChameleonPage/ChameleonPage.tsx";
+import FilmLoverPage from "@/pages/FilmLoverPage/FilmLoverPage.tsx";
+import JettMainPlayerPage from "@/pages/JettMainPlayerPage/JettMainPlayerPage.tsx";
+import LoverBoyPage from "@/pages/LoverBoyPage/LoverBoyPage.tsx";
 
 const routes = createBrowserRouter([
   {
@@ -27,6 +34,10 @@ const routes = createBrowserRouter([
       {
         path: "/top",
         element: <TopPage />,
+      },
+      {
+        path: "/introduction",
+        element: <IntroductionPage />,
       },
       {
         path: "/top-msgs",
@@ -49,8 +60,32 @@ const routes = createBrowserRouter([
         element: <BestPersonTestPage />,
       },
       {
-        path: "/introduction",
-        element: <IntroductionPage />,
+        path: "/ping",
+        element: <PingBoyPage />,
+      },
+      {
+        path: "/immo-player",
+        element: <ImmortalPlayerPage />,
+      },
+      {
+        path: "/vandal-bro",
+        element: <VandalBroPage />,
+      },
+      {
+        path: "/chameleon",
+        element: <ChameleonPage />,
+      },
+      {
+        path: "/film-lover",
+        element: <FilmLoverPage />,
+      },
+      {
+        path: "/jett-baiter",
+        element: <JettMainPlayerPage />,
+      },
+      {
+        path: "/lover-boy",
+        element: <LoverBoyPage />,
       },
     ],
   },
