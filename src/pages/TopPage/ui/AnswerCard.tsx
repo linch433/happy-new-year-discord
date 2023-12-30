@@ -31,7 +31,9 @@ const AnswerCard = () => {
               imgUrl={user.imgUrl}
               name={user.userName}
               selected={user.userName === selectedUser}
-              onSelectionChange={() => handleUserSelection(user.userName)}
+              onSelectionChange={() => {
+                handleUserSelection(user.userName);
+              }}
             />
           ))}
         </div>

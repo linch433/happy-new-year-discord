@@ -151,9 +151,9 @@ const TopMsgPage = () => {
         transition={{ duration: 1 }}
       >
         <div className="prev">
-          <Link to="/">
+          <div>
             <FaChevronUp style={{ color: "white" }} />
-          </Link>
+          </div>
         </div>
         <div className="page-no">
           <p>

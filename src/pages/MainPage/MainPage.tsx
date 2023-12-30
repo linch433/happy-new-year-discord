@@ -1,6 +1,6 @@
+import "./styles/MainPage.css";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
-import "./styles/MainPage.css";
 import { Link } from "react-router-dom";
 import { calc, trans } from "@/app/helpers/calculations.ts";
 import {
@@ -77,7 +77,7 @@ const MainPage = () => {
             </motion.h2>
           </motion.div>
           <motion.div variants={btn}>
-            <Link to="/top-msgs">
+            <Link to="/introduction">
               <button className="start-btn">Сюда давай тикай</button>
             </Link>
           </motion.div>

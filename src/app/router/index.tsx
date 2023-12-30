@@ -7,6 +7,8 @@ import TopMsgPage from "@/pages/TopByMessagesPage/TopMsgPage.tsx";
 import ValoPlayerPage from "@/pages/ValoPlayerPage/ValoPlayerPage.tsx";
 import BestGifPage from "@/pages/BestGifferPage/BestGifPage.tsx";
 import ImportantPersonPage from "@/pages/ImportantPersonPage/ImportantPersonPage.tsx";
+import BestPersonTestPage from "@/pages/BestPersonTestPage/BestPersonTestPage.tsx";
+import IntroductionPage from "@/pages/IntroductionPage/IntroductionPage.tsx";
 
 const routes = createBrowserRouter([
   {
@@ -41,6 +43,14 @@ const routes = createBrowserRouter([
       {
         path: "/important-clown",
         element: <ImportantPersonPage />,
+      },
+      {
+        path: "/person-of-the-year",
+        element: <BestPersonTestPage />,
+      },
+      {
+        path: "/introduction",
+        element: <IntroductionPage />,
       },
     ],
   },

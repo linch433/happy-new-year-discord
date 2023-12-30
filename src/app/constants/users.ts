@@ -9,75 +9,57 @@ import vuk from "@/assets/vuk.webp";
 import juliet from "@/assets/juliet.webp";
 import csaos from "@/assets/csaos.webp";
 import Bogdan from "@/assets/Bogdan.webp";
-import Roma from "@/assets/elliron_roma.webp";
-import Sanya from "@/assets/sanya.webp";
-import chajka from "@/assets/chajka.jpg";
-import lodochnik from "@/assets/lodochnik.webp";
 
-interface UsersProp {
+export interface UsersProp {
   imgUrl: string;
   userName: string;
 }
 
 export const users: UsersProp[] = [
   {
-    imgUrl: linch,
-    userName: "linch",
+    imgUrl: Bogdan,
+    userName: "BogdanBakugan",
+  },
+  {
+    imgUrl: mblate,
+    userName: "mblate",
   },
   {
     imgUrl: vermari,
-    userName: "vermari / ?",
+    userName: "?",
   },
   {
-    imgUrl: murmaider,
-    userName: "murmaider / I'm So FUckIng BaD",
+    imgUrl: modest,
+    userName: "1modest / ad",
+  },
+
+  {
+    imgUrl: berstyx,
+    userName: "berstyx",
   },
   {
     imgUrl: Beatraid,
     userName: "Beatraid",
   },
-  {
-    imgUrl: modest,
-    userName: "1modest / ad / Андрік",
-  },
-  {
-    imgUrl: mblate,
-    userName: "mblate / Макс",
-  },
+
   {
     imgUrl: juliet,
     userName: "Juliet",
   },
   {
+    imgUrl: murmaider,
+    userName: "I'm So FUckIng BaD",
+  },
+  {
     imgUrl: vuk,
-    userName: "VuK / Сныфер",
+    userName: "VuK",
   },
   {
     imgUrl: csaos,
-    userName: "chaos / Андрюха",
+    userName: "chaos",
   },
   {
-    imgUrl: Bogdan,
-    userName: "BogdanBakugan",
-  },
-  {
-    imgUrl: Roma,
-    userName: ".elliron / Рома",
-  },
-  {
-    imgUrl: chajka,
-    userName: "Чайка",
-  },
-  {
-    imgUrl: lodochnik,
-    userName: "Лодочник",
-  },
-  {
-    imgUrl: Sanya,
-    userName: "coaester / Брат Беатріда",
-  },
-  {
-    imgUrl: berstyx,
-    userName: "berstyx / Бістрікс / Дана",
+    imgUrl: linch,
+    userName: "linch",
   },
 ];
