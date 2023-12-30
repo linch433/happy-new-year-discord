@@ -6,7 +6,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => (
   <div className="flex flex-row min-h-screen">
-    <div>{children}</div>
+    <div className="overflow-hidden">{children}</div>
   </div>
 );
 

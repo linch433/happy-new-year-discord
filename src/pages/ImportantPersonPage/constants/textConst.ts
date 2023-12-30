@@ -1,0 +1,4 @@
+const names =
+  "Володимир, Володя, Вова, Vladimir, Volodymyr, Volodimir, Wladimir, Woldemar, Vladimiro, Włodzimierz, Влатко, Βλαδίμηρος, Vladimiros, ולדימיר, فلاديمير, व्लादिमीर, 弗拉基米尔, ウラジーミル, 블라디미르, Володимир, Володя, Вова, Vladimir, Volodymyr, Volodimir, Wladimir, Woldemar, Vladimiro, Włodzimierz, Влатко, Βλαδίμηρος, Vladimiros, ולדימיר, فلاديمير, व्लादिमीर, 弗拉基米尔, ウラジーミル, 블라디미르, Володимир, Володя, Вова, Vladimir, Volodymyr, Volodimir, Wladimir, Woldemar, Vladimiro, Włodzimierz, Влатко, Βλαδίμηρος, Vladimiros, ולדימיר, فلاديمير, व्लादिमीर, 弗拉基米尔, ウラジーミル, 블라디미르, Володимир, Володя, Вова, Vladimir, Volodymyr, Volodimir, Wladimir, Woldemar, Vladimiro, Włodzimierz, Влатко, Βλαδίμηρος, Vladimiros, ולדימיר, فلاديمير, व्लादिमीर, 弗拉基米尔, ウラジーミル, 블라디미르, Володимир, Володя, Вова, Vladimir, Volodymyr, Volodimir, Wladimir, Woldemar, Vladimiro, Włodzimierz, Влатко, Βλαδίμηρος, Vladimiros, ולדימיר, فلاديمير, व्लादिमीर, 弗拉基米尔, ウラジーミル, 블라디미르,";
+
+export { names };

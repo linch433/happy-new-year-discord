@@ -161,7 +161,7 @@ const ValoPlayerPage = () => {
           </p>
         </div>
         <div className="next">
-          <Link to="/valo-players">
+          <Link to="/best-giffer">
             <FaChevronDown style={{ color: "white" }} />
           </Link>
         </div>

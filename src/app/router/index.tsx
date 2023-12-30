@@ -5,6 +5,8 @@ import MainPage from "@/pages/MainPage/MainPage.tsx";
 import TopPage from "@/pages/TopPage/TopPage.tsx";
 import TopMsgPage from "@/pages/TopByMessagesPage/TopMsgPage.tsx";
 import ValoPlayerPage from "@/pages/ValoPlayerPage/ValoPlayerPage.tsx";
+import BestGifPage from "@/pages/BestGifferPage/BestGifPage.tsx";
+import ImportantPersonPage from "@/pages/ImportantPersonPage/ImportantPersonPage.tsx";
 
 const routes = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const routes = createBrowserRouter([
       {
         path: "/valo-players",
         element: <ValoPlayerPage />,
+      },
+      {
+        path: "/best-giffer",
+        element: <BestGifPage />,
+      },
+      {
+        path: "/important-clown",
+        element: <ImportantPersonPage />,
       },
     ],
   },
