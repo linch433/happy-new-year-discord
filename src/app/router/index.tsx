@@ -16,6 +16,7 @@ import ChameleonPage from "@/pages/ChameleonPage/ChameleonPage.tsx";
 import FilmLoverPage from "@/pages/FilmLoverPage/FilmLoverPage.tsx";
 import JettMainPlayerPage from "@/pages/JettMainPlayerPage/JettMainPlayerPage.tsx";
 import LoverBoyPage from "@/pages/LoverBoyPage/LoverBoyPage.tsx";
+import YourStatsPage from "@/pages/YourStatsPage/YourStatsPage.tsx";
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const routes = createBrowserRouter([
         element: <TopPage />,
       },
       {
+        path: "/person-of-the-year",
+        element: <BestPersonTestPage />,
+      },
+      {
         path: "/introduction",
         element: <IntroductionPage />,
       },
@@ -54,10 +59,6 @@ const routes = createBrowserRouter([
       {
         path: "/important-clown",
         element: <ImportantPersonPage />,
-      },
-      {
-        path: "/person-of-the-year",
-        element: <BestPersonTestPage />,
       },
       {
         path: "/ping",
@@ -86,6 +87,10 @@ const routes = createBrowserRouter([
       {
         path: "/lover-boy",
         element: <LoverBoyPage />,
+      },
+      {
+        path: "/your-stats",
+        element: <YourStatsPage />,
       },
     ],
   },

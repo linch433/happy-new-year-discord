@@ -10,12 +10,24 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { names } from "@/pages/PingBoyPage/constants/textConst.ts";
 import loader from "@/assets/loader.gif";
+import { useEffect, useState } from "react";
 
 const PingBoyPage = () => {
+  const avgPingValues = [142, 23, 365, 9999, 40, 20643];
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 50 },
   }));
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      // Update the index to the next value in the array
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % avgPingValues.length);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [avgPingValues.length]);
 
   return (
     <motion.div className="TopArtist">
@@ -118,15 +130,18 @@ const PingBoyPage = () => {
               </motion.h1>
             </div>
             <div>
-              <motion.p
-                variants={artistInfo}
-                initial="in"
-                animate="anim"
-                exit="out"
-              >
-                Loading...
-                <br />
-                const avg_ping = 318.
+              <p>Loading...</p>
+              <motion.p variants={artistInfo}>
+                const avg_ping =
+                <motion.span
+                  key={currentIndex}
+                  variants={artistInfo}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  {` ${avgPingValues[currentIndex]}`} ms.
+                </motion.span>
               </motion.p>
             </div>
           </div>

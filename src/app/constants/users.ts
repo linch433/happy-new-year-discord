@@ -15,6 +15,16 @@ export interface UsersProp {
   userName: string;
 }
 
+export interface UsersStatsProp {
+  userName: string;
+  msgCount: number;
+  reactionCount: number;
+  averageOnlineTime: string;
+  msgMood: string;
+  mentionCount: number;
+  gifCount: number;
+}
+
 export const users: UsersProp[] = [
   {
     imgUrl: Bogdan,
@@ -61,5 +71,107 @@ export const users: UsersProp[] = [
   {
     imgUrl: linch,
     userName: "linch",
+  },
+];
+
+export const userStats: UsersStatsProp[] = [
+  {
+    userName: "BogdanBakugan",
+    averageOnlineTime: "23:00",
+    mentionCount: 159,
+    msgCount: 1722,
+    msgMood: "нейтральний",
+    reactionCount: 123,
+    gifCount: 90,
+  },
+  {
+    userName: "mblate",
+    averageOnlineTime: "21:00",
+    mentionCount: 79,
+    msgCount: 333,
+    msgMood: "нейтральний",
+    reactionCount: 123,
+    gifCount: 14,
+  },
+  {
+    userName: "?",
+    averageOnlineTime: "23:00",
+    mentionCount: 113,
+    msgCount: 489,
+    msgMood: "негативний",
+    reactionCount: 123,
+    gifCount: 11,
+  },
+  {
+    userName: "1modest / ad",
+    averageOnlineTime: "20:00",
+    mentionCount: 211,
+    msgCount: 1350,
+    msgMood: "позитивний",
+    reactionCount: 123,
+    gifCount: 12,
+  },
+  {
+    userName: "berstyx",
+    averageOnlineTime: "20:00",
+    mentionCount: 287,
+    msgCount: 1816,
+    msgMood: "негативний",
+    reactionCount: 123,
+    gifCount: 4,
+  },
+  {
+    userName: "Beatraid",
+    averageOnlineTime: "21:00",
+    mentionCount: 39,
+    msgCount: 110,
+    msgMood: "негативний",
+    reactionCount: 123,
+    gifCount: 0,
+  },
+  {
+    userName: "Juliet",
+    averageOnlineTime: "16:00",
+    mentionCount: 393,
+    msgCount: 4973,
+    msgMood: "негативний",
+    reactionCount: 123,
+    gifCount: 183,
+  },
+  {
+    userName: "I'm So FUckIng BaD",
+    averageOnlineTime: "15:00",
+    mentionCount: 186,
+    msgCount: 653,
+    msgMood: "нейтральний",
+    reactionCount: 123,
+    gifCount: 15,
+  },
+  {
+    userName: "VuK",
+    averageOnlineTime: "17:00",
+    mentionCount: 287,
+    msgCount: 2416,
+    msgMood: "нейтральний",
+    reactionCount: 123,
+    gifCount: 88,
+  },
+  {
+    userName: "chaos",
+    averageOnlineTime: "18:00",
+    mentionCount: 4,
+    msgCount: 30,
+    msgMood: "негативний",
+    reactionCount: 123,
+    gifCount: 0,
+  },
+  {
+    userName: "linch",
+    averageOnlineTime: "15:00",
+    mentionCount: 431,
+    msgCount: 2607,
+    msgMood: "позитивний",
+    reactionCount: 123,
+    gifCount: 30,
   },
 ];

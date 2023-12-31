@@ -160,7 +160,7 @@ const LoverBoyPage = () => {
           </p>
         </div>
         <div className="next">
-          <Link to="/">
+          <Link to="/your-stats">
             <FaChevronDown style={{ color: "white" }} />
           </Link>
         </div>
