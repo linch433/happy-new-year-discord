@@ -28,8 +28,8 @@ const AnswerCard = () => {
           user: localStorageUser,
           vote: selectedUser,
         });
-        navigate("/the-end");
         console.log(response);
+        navigate("/the-end");
       }
     } catch (error) {
       console.log(error);
