@@ -35,11 +35,11 @@ const TopPage = () => (
     >
       <motion.div variants={staggerTwo} className="DIV ONE">
         <motion.div variants={slideIn}>Але, це ще не кінець</motion.div>
-        <motion.div variants={slideIn}>котики задроти</motion.div>
+        <motion.div variants={slideIn}>котики підарасики</motion.div>
       </motion.div>
       <motion.div variants={staggerTwo} className="DIV`">
         <motion.div variants={slideIn}>Треба відповісти на</motion.div>
-        <motion.div variants={slideIn}>декілька запитань!</motion.div>
+        <motion.div variants={slideIn}>ще одне запитання!</motion.div>
       </motion.div>
     </motion.div>
     <motion.div
