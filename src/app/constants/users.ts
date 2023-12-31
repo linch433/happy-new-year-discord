@@ -81,7 +81,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 159,
     msgCount: 1722,
     msgMood: "нейтральний",
-    reactionCount: 123,
+    reactionCount: 49,
     gifCount: 90,
   },
   {
@@ -90,7 +90,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 79,
     msgCount: 333,
     msgMood: "нейтральний",
-    reactionCount: 123,
+    reactionCount: 52,
     gifCount: 14,
   },
   {
@@ -99,7 +99,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 113,
     msgCount: 489,
     msgMood: "негативний",
-    reactionCount: 123,
+    reactionCount: 14,
     gifCount: 11,
   },
   {
@@ -108,7 +108,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 211,
     msgCount: 1350,
     msgMood: "позитивний",
-    reactionCount: 123,
+    reactionCount: 5,
     gifCount: 12,
   },
   {
@@ -117,7 +117,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 287,
     msgCount: 1816,
     msgMood: "негативний",
-    reactionCount: 123,
+    reactionCount: 292,
     gifCount: 4,
   },
   {
@@ -126,7 +126,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 39,
     msgCount: 110,
     msgMood: "негативний",
-    reactionCount: 123,
+    reactionCount: 3,
     gifCount: 0,
   },
   {
@@ -135,7 +135,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 393,
     msgCount: 4973,
     msgMood: "негативний",
-    reactionCount: 123,
+    reactionCount: 72,
     gifCount: 183,
   },
   {
@@ -144,7 +144,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 186,
     msgCount: 653,
     msgMood: "нейтральний",
-    reactionCount: 123,
+    reactionCount: 71,
     gifCount: 15,
   },
   {
@@ -153,7 +153,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 287,
     msgCount: 2416,
     msgMood: "нейтральний",
-    reactionCount: 123,
+    reactionCount: 27,
     gifCount: 88,
   },
   {
@@ -162,7 +162,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 4,
     msgCount: 30,
     msgMood: "негативний",
-    reactionCount: 123,
+    reactionCount: 1,
     gifCount: 0,
   },
   {
@@ -171,7 +171,7 @@ export const userStats: UsersStatsProp[] = [
     mentionCount: 431,
     msgCount: 2607,
     msgMood: "позитивний",
-    reactionCount: 123,
+    reactionCount: 188,
     gifCount: 30,
   },
 ];
