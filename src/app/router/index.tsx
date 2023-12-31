@@ -17,6 +17,7 @@ import FilmLoverPage from "@/pages/FilmLoverPage/FilmLoverPage.tsx";
 import JettMainPlayerPage from "@/pages/JettMainPlayerPage/JettMainPlayerPage.tsx";
 import LoverBoyPage from "@/pages/LoverBoyPage/LoverBoyPage.tsx";
 import YourStatsPage from "@/pages/YourStatsPage/YourStatsPage.tsx";
+import EndPage from "@/pages/EndPage/EndPage.tsx";
 
 const routes = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ const routes = createBrowserRouter([
       {
         path: "/your-stats",
         element: <YourStatsPage />,
+      },
+      {
+        path: "/the-end",
+        element: <EndPage />,
       },
     ],
   },

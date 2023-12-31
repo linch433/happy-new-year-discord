@@ -70,14 +70,14 @@ const IntroductionPage = () => {
       >
         <div className="p-2">
           <motion.div
-            className="border-2 rounded-md border-white p-2 flex items-center justify-center flex-col"
+            className="border-2 rounded-xl border-white p-2 flex items-center justify-center flex-col overflow-y-visible"
             variants={popUp}
             initial="in"
             animate="anim"
             exit="out"
           >
             <div className="text-4xl text-white">Ти хто?</div>
-            <div className="text-white flex justify-center items-center text-center my-1">
+            <div className="text-white flex justify-center items-center text-center my-0.5">
               Спочатку на себе, а далі на велику жовту кнопочку
             </div>
             <div className="flex gap-1 flex-col w-full">
@@ -87,7 +87,9 @@ const IntroductionPage = () => {
                   imgUrl={user.imgUrl}
                   name={user.userName}
                   selected={user.userName === selectedUser}
-                  onSelectionChange={() => handleUserSelection(user.userName)}
+                  onSelectionChange={() => {
+                    handleUserSelection(user.userName);
+                  }}
                 />
               ))}
             </div>

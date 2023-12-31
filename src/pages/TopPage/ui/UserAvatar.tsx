@@ -39,7 +39,7 @@ const UserAvatar = ({
         <AvatarImage src={imgUrl} alt="user avatar" />
         <AvatarFallback>{name}</AvatarFallback>
       </Avatar>
-      <p className="cursor-pointer text-[16px]">{name}</p>
+      <p className="cursor-pointer text-[18px]">{name}</p>
     </div>
   </>
 );
